@@ -1,6 +1,6 @@
 package com.mlfc.fangyuan.provider.impl;
 
-import com.mlfc.fangyuan.api.FangyuanService;
+import apiserrvice.FangyuanService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.DubboService;
 

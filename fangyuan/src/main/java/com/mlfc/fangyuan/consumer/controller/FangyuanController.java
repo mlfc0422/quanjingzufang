@@ -1,6 +1,6 @@
 package com.mlfc.fangyuan.consumer.controller;
 
-import com.mlfc.fangyuan.api.FangyuanService;
+import apiserrvice.FangyuanService;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.web.bind.annotation.RestController;
 
