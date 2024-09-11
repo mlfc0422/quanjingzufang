@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Data
@@ -12,9 +14,12 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class Order implements Serializable {
     private long id;
-    private long HouseResourcesId;
     private long userId;
-    private byte statusCode;
+    private long HouseResourcesId;
+    private LocalDate startTime;
+    private LocalDate endTime;
+    private BigDecimal totalPrice;
+    private String status;
     private LocalDateTime createTime;
     private LocalDateTime updateTime;
 
