@@ -1,7 +1,7 @@
 package com.mlfc.fangyuan.provider.impl;
 
 import apiserrvice.TestService;
-import com.mlfc.fangyuan.provider.mapper.FangyuanMapper;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.mlfc.fangyuan.provider.mapper.TestMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.DubboService;
@@ -12,7 +12,7 @@ import java.util.List;
 
 @Slf4j
 @DubboService
-public class TestServiceImpl implements TestService {
+public class TestServiceImpl extends ServiceImpl<TestMapper,Test> implements TestService {
 
     @Autowired
     private TestMapper testMapper;

@@ -1,10 +1,9 @@
 package apiserrvice;
 
-import common.Rest;
+import com.baomidou.mybatisplus.extension.service.IService;
 import pojo.Test;
-
 import java.util.List;
 
-public interface TestService {
+public interface TestService extends IService<Test> {
     List<Test> test();
 }
