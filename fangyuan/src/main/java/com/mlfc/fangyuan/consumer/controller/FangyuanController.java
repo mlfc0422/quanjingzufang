@@ -4,6 +4,7 @@ import apiserrvice.FangyuanService;
 import common.Rest;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.DubboReference;
+import org.apache.ibatis.annotations.Delete;
 import org.springframework.web.bind.annotation.*;
 import pojo.HouseResources;
 
@@ -36,11 +37,11 @@ public class FangyuanController {
         return fangyuanService.list();
     }
 
-    @PostMapping("/delete/{id}")
-    public Rest<String> deleteByIds(@RequestBody Long params){
 
-        fangyuanService.removeByIds(Collections.singleton(params.longValue()));
-
+    @DeleteMapping("/delete")
+    public Rest<String> deleteByIds(@RequestBody List<Integer> ids){
+        log.info("批量删除房源:{}", ids);
+        fangyuanService.removeByIds(ids);
         // 如果找到了资源，返回200状态码和资源
         return Rest.success("删除成功");
     }
