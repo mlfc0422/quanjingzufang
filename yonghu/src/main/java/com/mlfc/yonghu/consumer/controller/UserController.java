@@ -6,7 +6,7 @@ import common.Rest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import pojo.User;
-import pojo.UserDataObject;
+
 
 @RequestMapping("users")
 @RestController
@@ -37,10 +37,17 @@ public class UserController {
 
     //用户查询
     @GetMapping("{userId}")
-    public Rest<User> UserGet(@RequestBody User user){
+    public Rest<User> UserGet(@RequestBody User user,@RequestBody long params){
 
-        userService.getById(user.getUserId());
-        return Rest.success(null);
+        QueryWrapper<User> wrapper = new QueryWrapper<>();
+
+        if(params == user.getUserId()){
+            user = userService.getById(user.getUserId());}
+        else {
+            userService.getOne(wrapper.select("userName","IpAddress","gender","age")
+                    .eq("userId",user.getUserId()));
+        }
+        return Rest.success(user);
     }
 
     //用户管理
