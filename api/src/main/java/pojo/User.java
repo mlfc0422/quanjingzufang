@@ -6,7 +6,8 @@ import java.io.Serializable;
 
 @Data
 public class User implements Serializable {
-    private Long userId;                   // 用户ID
+    private Long id;                        // 用户ID
+    private String account;                 //账号
     private String userName;               // 用户名
     private String password;               // 密码
     private String realName;               // 真实姓名
@@ -15,6 +16,6 @@ public class User implements Serializable {
     private String phoneNamber;            // 电话号码
     private String idNumber;               // 身份证号
     private String emailAddress;           // 邮件地址
-    private String ipAddress;              // 物理地址
+    private String address;              // 物理地址
 
 }
