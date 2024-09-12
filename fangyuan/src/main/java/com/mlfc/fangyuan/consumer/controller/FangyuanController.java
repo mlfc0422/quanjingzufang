@@ -19,7 +19,7 @@ public class FangyuanController {
     private FangyuanService fangyuanService;
 
 
-    @GetMapping("/{id}")
+    @DeleteMapping("/{id}")
     public Rest<HouseResources> QueryFYById(@RequestBody Long id) {
         HouseResources houseResources = fangyuanService.getById(id);
         // 检查结果是否为空，如果为空则返回404
@@ -37,7 +37,7 @@ public class FangyuanController {
     }
 
     @PostMapping("/delete/{id}")
-    public Rest<String> deleteByIds(@RequestBody Long params){
+    public Rest<String> deleteByIds(@RequestBody Long params) {
 
         fangyuanService.removeByIds(Collections.singleton(params.longValue()));
 
