@@ -18,8 +18,11 @@ public class OrderController {
     @PostMapping("/add")
     public Rest<Order> addOrder(@RequestBody Order order) {
         log.info("add order: {}", order);
-        boolean success = orderService.createOrder(order);
-        return Rest.success(null);
+        boolean result = orderService.createOrder(order);
+        if (result) {
+            return Rest.success(order);
+        }
+        return Rest.error("创建订单失败");
     }
 
 }

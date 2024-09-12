@@ -28,7 +28,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
     public boolean createOrder(Order order) {
         // 检查房源是否可租赁
         boolean isRentable = fangyuanService.isRentable(order.getHouseResourcesId());
-        if (!isRentable) {
+        if (isRentable) {
             return false; // 如果房源不可租赁，返回失败
         }
 

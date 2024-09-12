@@ -32,6 +32,6 @@ public class HouseResources implements Serializable {
     private String propertyCost;       // 物业费
     private Date created;              // 创建时间
     private Date updated;               // 更新时间
-    private Boolean statusCode;             // 状态，1-已租，0-未租
+    private Boolean statusCode;         // 状态，0-未租，1-已租
 
 }
