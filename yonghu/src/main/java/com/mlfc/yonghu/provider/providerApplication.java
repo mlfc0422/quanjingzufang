@@ -1,4 +1,4 @@
-package com.lzyl.User.provider;
+package com.mlfc.yonghu.provider;
 
 public class providerApplication {
 }

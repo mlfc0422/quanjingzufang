@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.mlfc</groupId>
-    <artifactId>User</artifactId>
+    <artifactId>yonghu</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>yonghu</name>
     <description>yonghu</description>
