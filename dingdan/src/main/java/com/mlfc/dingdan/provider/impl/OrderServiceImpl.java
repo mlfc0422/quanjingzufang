@@ -26,12 +26,11 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
     @Transactional
     @Override
     public boolean createOrder(Order order) {
-        //TODO: 检查房源是否可租赁
-//        // 检查房源是否可租赁
-//        boolean isRentable = fangyuanService
-//        if (!isRentable) {
-//            return false; // 如果房源不可租赁，返回失败
-//        }
+        // 检查房源是否可租赁
+        boolean isRentable = fangyuanService.isRentable(order.getHouseResourcesId());
+        if (!isRentable) {
+            return false; // 如果房源不可租赁，返回失败
+        }
 
         // 生成唯一订单号
         SnowflakeIdGenerator idGenerator = new SnowflakeIdGenerator(1, 1);

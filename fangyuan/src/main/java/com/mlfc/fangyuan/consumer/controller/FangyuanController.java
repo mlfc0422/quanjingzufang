@@ -18,7 +18,6 @@ public class FangyuanController {
     @DubboReference
     private FangyuanService fangyuanService;
 
-
     @DeleteMapping("/{id}")
     public Rest<HouseResources> QueryFYById(@RequestBody Long id) {
         HouseResources houseResources = fangyuanService.getById(id);
