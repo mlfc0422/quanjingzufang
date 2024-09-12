@@ -15,7 +15,7 @@ import pojo.User;
 @Slf4j
 public class UserController {
 
-    private final UserService userService;
+    private UserService userService;
 
     //用户登录
     @GetMapping("username")
