@@ -9,9 +9,4 @@ import java.time.LocalDateTime;
 @Slf4j
 public class FangyuanServiceImpl implements FangyuanService {
 
-    @Override
-    public LocalDateTime getLocalDateTime() {
-        log.info("getLocalDateTime");
-        return LocalDateTime.now();
-    }
 }
