@@ -1,19 +1,16 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="FrameworkDetectionExcludesConfiguration">
-    <file type="web" url="file://$PROJECT_DIR$/dingdan" />
-  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/fangyuan/pom.xml" />
         <option value="$PROJECT_DIR$/api/pom.xml" />
-        <option value="$PROJECT_DIR$/yonghu/pom.xml" />
+        <option value="$PROJECT_DIR$/User/pom.xml" />
+        <option value="$PROJECT_DIR$/fangyuan/pom.xml" />
         <option value="$PROJECT_DIR$/dingdan/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
