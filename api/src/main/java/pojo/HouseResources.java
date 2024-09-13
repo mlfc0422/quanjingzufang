@@ -17,7 +17,7 @@ public class HouseResources implements Serializable {
     private Integer rent;              // 租金
     private Boolean rentMethod;        // 租赁方式，0-整租，1-合租
     private Integer paymentMethod;      // 支付方式，1-付一押一，2-付三押一，3-付六押一，4-年付押一，5-其它
-    private String houseType;          // 户型，如：2室1厅1卫
+    private String houseType;          // 户型，如：2室 1厅 1卫
     private String coveredArea;        // 建筑面积
     private String useArea;            // 使用面积
     private String floor;              // 楼层，如：8/26
@@ -32,6 +32,6 @@ public class HouseResources implements Serializable {
     private String propertyCost;       // 物业费
     private Date created;              // 创建时间
     private Date updated;               // 更新时间
-    private Boolean statusCode;             // 状态，1-已租，0-未租
+    private Boolean statusCode;         // 状态，0-未租，1-已租
 
 }

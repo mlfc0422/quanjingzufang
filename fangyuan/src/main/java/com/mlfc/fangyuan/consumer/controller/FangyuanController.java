@@ -23,7 +23,6 @@ public class FangyuanController {
     @DubboReference
     private FangyuanService fangyuanService;
 
-
     @GetMapping("/{id}")
     public Rest<HouseResources> QueryFYById(@RequestBody Long id) {
         log.info("查询房源:{}", id);

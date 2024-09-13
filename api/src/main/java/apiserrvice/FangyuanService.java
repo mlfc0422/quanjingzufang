@@ -10,6 +10,7 @@ import java.util.List;
 
 public interface FangyuanService  extends IService<HouseResources> {
 
+    boolean isRentable(long houseResourcesId);
     void deleteByIds(List<Integer> ids);
 
     Page<HouseResources> selectPage(Page<HouseResources> page, QueryWrapper<HouseResources> wrapper);

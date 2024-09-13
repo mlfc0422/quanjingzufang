@@ -9,12 +9,11 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.DubboService;
 import org.springframework.beans.factory.annotation.Autowired;
 import pojo.HouseResources;
-
 import java.util.List;
 
 @DubboService
 @Slf4j
-public class FangyuanServiceImpl extends ServiceImpl<FangyuanMapper , HouseResources>implements FangyuanService {
+public class FangyuanServiceImpl extends ServiceImpl<FangyuanMapper, HouseResources> implements FangyuanService {
 
     @Autowired
     private FangyuanMapper fangyuanMapper;
@@ -30,4 +29,8 @@ public class FangyuanServiceImpl extends ServiceImpl<FangyuanMapper , HouseResou
     }
 
 
+    @Override
+    public boolean isRentable(long houseResourcesId) {
+        return fangyuanMapper.isRentable(houseResourcesId);
+    }
 }
