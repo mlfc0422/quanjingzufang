@@ -9,7 +9,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.DubboService;
 import org.springframework.beans.factory.annotation.Autowired;
 import pojo.HouseResources;
-import java.util.List;
 
 @DubboService
 @Slf4j
@@ -19,15 +18,9 @@ public class FangyuanServiceImpl extends ServiceImpl<FangyuanMapper, HouseResour
     private FangyuanMapper fangyuanMapper;
 
     @Override
-    public void deleteByIds(List<Integer> ids) {
-        fangyuanMapper.deleteBatchIds(ids);
-    }
-
-    @Override
     public Page<HouseResources> selectPage(Page<HouseResources> page, QueryWrapper<HouseResources> wrapper) {
         return fangyuanMapper.selectPage(page, wrapper);
     }
-
 
     @Override
     public boolean isRentable(long houseResourcesId) {
