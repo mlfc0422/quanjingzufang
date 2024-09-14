@@ -2,6 +2,7 @@ package com.mlfc.dingdan.consumer.controller;
 
 import apiserrvice.AliPayService;
 import com.alipay.api.AlipayApiException;
+import common.Rest;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,8 +20,10 @@ public class PayController {
     private AliPayService aliPayService;
 
     @PostMapping("alipay")
-    public String alipay(@RequestBody Orders orders) throws AlipayApiException {
+    public Rest<String> alipay(@RequestBody Orders orders) throws AlipayApiException {
         log.info("alipay: {}", orders);
-        return aliPayService.aliPay(orders);
+        String htmlResponse = aliPayService.aliPay(orders);
+        log.info("alipay response: {}", htmlResponse);
+        return Rest.success(htmlResponse);
     }
 }
