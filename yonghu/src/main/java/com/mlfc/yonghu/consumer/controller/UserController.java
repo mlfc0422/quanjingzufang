@@ -11,6 +11,7 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.dubbo.config.annotation.DubboReference;
 import org.apache.dubbo.common.logger.LoggerFactory;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.web.bind.annotation.*;
@@ -31,8 +32,8 @@ public class UserController {
     private UserService userService;
 
     //用户登录
-    @GetMapping("username")
-    public Rest<User> UserLogin(@RequestBody User user){
+    @GetMapping("login")
+    public Rest<User> UserLogin(@RequestBody User user) {
 
         String id2=userService.selectId(user.getUserName(),user.getPassword());
 
@@ -42,7 +43,6 @@ public class UserController {
         }
         return null;
     }
-
 
     //用户注册
     @PostMapping
@@ -68,21 +68,21 @@ public class UserController {
 
         QueryWrapper<User> wrapper = new QueryWrapper<>();
 
-        if(params == user.getId()){
-            user = userService.getById(user.getId());}
-        else {
-            userService.getOne(wrapper.select("userName","account","address","gender","age")
-                    .eq("id",user.getId()));
+        if (params == user.getId()) {
+            user = userService.getById(user.getId());
+        } else {
+            userService.getOne(wrapper.select("userName", "account", "address", "gender", "age")
+                    .eq("id", user.getId()));
         }
         return Rest.success(user);
     }
 
     //用户管理
     @PutMapping("/{id}/update")
-    public void UserUpdate(@RequestBody User user){
+    public void UserUpdate(@RequestBody User user) {
 
         QueryWrapper<User> wrapper = new QueryWrapper<>();
-        userService.update(user,wrapper.eq("id",user.getId()));
+        userService.update(user, wrapper.eq("id", user.getId()));
 
     }
 
