@@ -5,7 +5,6 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.mlfc.yonghu.provider.mapper.UserMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.DubboService;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import pojo.User;
 
@@ -20,5 +19,23 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     public String selectId(String username, String password) {
         String id = userMapper.selectId(username, password);
         return id;
+    }
+
+    @Override
+    public String selectIdUnPassword(String username) {
+        String id = userMapper.selectIdUnPassword(username);
+        return id;
+    }
+
+    @Override
+    public User selectOtherUser(Long id) {
+        User user = userMapper.selectOtherUser(id);
+        return user;
+    }
+
+    @Override
+    public User selectByToken(String token) {
+        User user = userMapper.selectByToken(token);
+        return user;
     }
 }
