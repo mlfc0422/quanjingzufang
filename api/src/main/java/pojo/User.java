@@ -17,5 +17,6 @@ public class User implements Serializable {
     private String idNumber;               // 身份证号
     private String emailAddress;           // 邮件地址
     private String address;              // 物理地址
+    private String token;                   // 令牌
 
 }
