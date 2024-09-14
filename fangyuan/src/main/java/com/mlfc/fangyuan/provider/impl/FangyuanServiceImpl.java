@@ -8,17 +8,17 @@ import com.mlfc.fangyuan.provider.mapper.FangyuanMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.DubboService;
 import org.springframework.beans.factory.annotation.Autowired;
-import pojo.HouseResources;
+import pojo.Property;
 
 @DubboService
 @Slf4j
-public class FangyuanServiceImpl extends ServiceImpl<FangyuanMapper, HouseResources> implements FangyuanService {
+public class FangyuanServiceImpl extends ServiceImpl<FangyuanMapper, Property> implements FangyuanService {
 
     @Autowired
     private FangyuanMapper fangyuanMapper;
 
     @Override
-    public Page<HouseResources> selectPage(Page<HouseResources> page, QueryWrapper<HouseResources> wrapper) {
+    public Page<Property> selectPage(Page<Property> page, QueryWrapper<Property> wrapper) {
         return fangyuanMapper.selectPage(page, wrapper);
     }
 

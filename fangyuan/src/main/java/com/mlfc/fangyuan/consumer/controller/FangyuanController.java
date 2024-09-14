@@ -7,7 +7,7 @@ import common.Rest;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.web.bind.annotation.*;
-import pojo.HouseResources;
+import pojo.Property;
 import java.util.List;
 
 @RequestMapping("fangyuan")
@@ -19,20 +19,20 @@ public class FangyuanController {
     private FangyuanService fangyuanService;
 
     @GetMapping("/{id}")
-    public Rest<HouseResources> QueryFYById(@RequestBody Long id) {
+    public Rest<Property> QueryFYById(@RequestBody Long id) {
         log.info("查询房源:{}", id);
-        HouseResources houseResources = fangyuanService.getById(id);
+        Property property = fangyuanService.getById(id);
         // 检查结果是否为空，如果为空则返回404
-        if (houseResources == null) {
+        if (property == null) {
             return Rest.error("啥都没有");
         }
 
         // 如果找到了资源，返回200状态码和资源
-        return Rest.success(houseResources);
+        return Rest.success(property);
     }
 
     @GetMapping("/all")
-    public List<HouseResources> QueryFY() {
+    public List<Property> QueryFY() {
         return fangyuanService.list();
     }
 
@@ -47,9 +47,9 @@ public class FangyuanController {
 
 
     @PostMapping("/add")
-    public Rest<String> addHouseResource(@RequestBody HouseResources houseResources) {
+    public Rest<String> addHouseResource(@RequestBody Property property) {
         try {
-            boolean saved = fangyuanService.save(houseResources);
+            boolean saved = fangyuanService.save(property);
             if (saved) {
                 return Rest.success("房源信息添加成功。");
             } else {
@@ -62,18 +62,18 @@ public class FangyuanController {
     }
 
     @GetMapping("/list")
-    public Rest<Page<HouseResources>> list(
+    public Rest<Page<Property>> list(
             @RequestParam(value = "pageNo", defaultValue = "1") int pageNo,
             @RequestParam(value = "pageSize", defaultValue = "10") int pageSize) {
 
         // 创建分页对象，MyBatis-Plus中分页的页码是从1开始的
-        Page<HouseResources> page = new Page<>(pageNo, pageSize);
+        Page<Property> page = new Page<>(pageNo, pageSize);
 
-        QueryWrapper<HouseResources> wrapper = new QueryWrapper<>();
+        QueryWrapper<Property> wrapper = new QueryWrapper<>();
 
         wrapper.select("title", "rent", "rent_method", "use_area", "decoration", "facilities", "pic");
         // 调用服务层方法，进行分页查询
-        Page<HouseResources> resultPage = fangyuanService.selectPage(page, wrapper);
+        Page<Property> resultPage = fangyuanService.selectPage(page, wrapper);
 
         // 返回包含分页数据的响应
         return Rest.success(resultPage);

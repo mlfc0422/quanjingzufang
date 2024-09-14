@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Data
-public class HouseResources implements Serializable {
+public class Property implements Serializable {
 
     private Long id;                   // 房源ID
     private String title;              // 房源标题

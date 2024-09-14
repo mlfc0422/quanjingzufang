@@ -11,6 +11,12 @@
           <option value="  &quot;startDate&quot;" />
           <option value="  &quot;endDate&quot;" />
           <option value="  &quot;totalPrice&quot;" />
+          <option value="&quot;outTradeNo&quot;" />
+          <option value="&quot;subject&quot;" />
+          <option value="totalAmount" />
+          <option value="description" />
+          <option value="&quot;totalAmount&quot;" />
+          <option value="&quot;description&quot;" />
         </set>
       </option>
     </inspection_tool>
