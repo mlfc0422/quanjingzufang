@@ -1,4 +1,4 @@
-package apiserrvice;
+package apiservice;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import pojo.User;

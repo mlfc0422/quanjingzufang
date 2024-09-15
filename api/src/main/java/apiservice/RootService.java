@@ -1,6 +1,5 @@
-package apiserrvice;
+package apiservice;
 
-import common.Rest;
 import pojo.Root;
 
 public interface RootService {

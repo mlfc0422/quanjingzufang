@@ -28,6 +28,8 @@ public class Orders implements Serializable {
      * 商品描述，可空
      */
     private String description;
+
+    private String status;
     /**
      * 超时时间参数
      */

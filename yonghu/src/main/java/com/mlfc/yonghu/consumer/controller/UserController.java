@@ -1,6 +1,6 @@
 package com.mlfc.yonghu.consumer.controller;
 
-import apiserrvice.UserService;
+import apiservice.UserService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import common.Rest;
 import lombok.extern.slf4j.Slf4j;

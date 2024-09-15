@@ -1,11 +1,13 @@
 package com.mlfc.dingdan.consumer.controller;
 
-import apiserrvice.OrderService;
+import apiservice.OrderService;
+import com.alipay.api.AlipayApiException;
 import common.Rest;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.web.bind.annotation.*;
 import pojo.Order;
+import pojo.Orders;
 
 @Slf4j
 @RestController
@@ -25,4 +27,18 @@ public class OrderController {
         return Rest.error("创建订单失败");
     }
 
+    @PostMapping("alipay")
+    public Rest<String> alipay(@RequestBody Orders orders) throws AlipayApiException {
+        log.info("alipay: {}", orders);
+        String htmlResponse = orderService.aliPay(orders);
+        log.info("alipay response: {}", htmlResponse);
+        return Rest.success(htmlResponse);
+    }
+
+    @PutMapping("alipay/return")
+    public Rest<Orders> aliReturn(@RequestBody Orders orders) {
+        log.info("alipay return: {}", orders);
+        orderService.aliReturn(orders);
+        return Rest.success(null);
+    }
 }

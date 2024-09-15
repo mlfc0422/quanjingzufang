@@ -1,6 +1,6 @@
 package com.mlfc.yonghu.consumer.controller;
 
-import apiserrvice.RootService;
+import apiservice.RootService;
 import common.Rest;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.DubboReference;

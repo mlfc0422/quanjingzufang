@@ -1,6 +1,6 @@
 package com.mlfc.fangyuan.consumer.controller;
 
-import apiserrvice.FangyuanService;
+import apiservice.FangyuanService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import common.Rest;
