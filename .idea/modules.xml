@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/dingdan/dingdan.iml" filepath="$PROJECT_DIR$/dingdan/dingdan.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fangyuan/fangyuan.iml" filepath="$PROJECT_DIR$/fangyuan/fangyuan.iml" />
       <module fileurl="file://$PROJECT_DIR$/quanjingzufang.iml" filepath="$PROJECT_DIR$/quanjingzufang.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yonghu/yonghu.iml" filepath="$PROJECT_DIR$/yonghu/yonghu.iml" />
     </modules>
   </component>
 </project>
