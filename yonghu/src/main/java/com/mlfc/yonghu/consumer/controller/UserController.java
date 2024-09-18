@@ -1,12 +1,12 @@
 package com.mlfc.yonghu.consumer.controller;
 
-import apiservice.UserService;
+import com.mlfc.api.apiservice.UserService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import common.Rest;
+import com.mlfc.api.common.Rest;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.web.bind.annotation.*;
-import pojo.User;
+import com.mlfc.api.pojo.User;
 
 
 @RequestMapping("user")

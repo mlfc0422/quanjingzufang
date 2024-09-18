@@ -1,6 +1,6 @@
-package apiservice;
+package com.mlfc.api.apiservice;
 
-import pojo.Root;
+import com.mlfc.api.pojo.Root;
 
 public interface RootService {
 

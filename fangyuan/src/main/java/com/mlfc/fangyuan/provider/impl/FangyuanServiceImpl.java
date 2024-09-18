@@ -1,6 +1,6 @@
 package com.mlfc.fangyuan.provider.impl;
 
-import apiservice.FangyuanService;
+import com.mlfc.api.apiservice.FangyuanService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -8,7 +8,7 @@ import com.mlfc.fangyuan.provider.mapper.FangyuanMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.DubboService;
 import org.springframework.beans.factory.annotation.Autowired;
-import pojo.Property;
+import com.mlfc.api.pojo.Property;
 
 @DubboService
 @Slf4j

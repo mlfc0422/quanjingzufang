@@ -1,13 +1,13 @@
 package com.mlfc.dingdan.consumer.controller;
 
-import apiservice.OrderService;
+import com.mlfc.api.apiservice.OrderService;
 import com.alipay.api.AlipayApiException;
-import common.Rest;
+import com.mlfc.api.common.Rest;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.web.bind.annotation.*;
-import pojo.Order;
-import pojo.Orders;
+import com.mlfc.api.pojo.Order;
+import com.mlfc.api.pojo.Orders;
 
 @Slf4j
 @RestController

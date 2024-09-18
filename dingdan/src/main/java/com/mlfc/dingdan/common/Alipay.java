@@ -8,7 +8,7 @@ import com.alipay.api.DefaultAlipayClient;
 import com.alipay.api.request.AlipayTradePagePayRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import pojo.Orders;
+import com.mlfc.api.pojo.Orders;
 
 
 @Component

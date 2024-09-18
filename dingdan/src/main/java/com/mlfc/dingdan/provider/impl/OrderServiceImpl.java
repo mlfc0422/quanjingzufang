@@ -1,19 +1,19 @@
 package com.mlfc.dingdan.provider.impl;
 
-import apiservice.FangyuanService;
-import apiservice.OrderService;
+import com.mlfc.api.apiservice.FangyuanService;
+import com.mlfc.api.apiservice.OrderService;
 import com.alipay.api.AlipayApiException;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.mlfc.dingdan.common.Alipay;
 import com.mlfc.dingdan.provider.mapper.OrderMapper;
-import common.SnowflakeIdGenerator;
+import com.mlfc.api.common.SnowflakeIdGenerator;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.apache.dubbo.config.annotation.DubboService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
-import pojo.Order;
-import pojo.Orders;
+import com.mlfc.api.pojo.Order;
+import com.mlfc.api.pojo.Orders;
 
 import java.time.LocalDateTime;
 
@@ -25,7 +25,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
     private OrderMapper orderMapper;
 
     @Autowired
-    private Alipay alipays;
+    private Alipay alipay;
 
     @DubboReference
     private FangyuanService  fangyuanService;
@@ -54,7 +54,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
     @Override
     public String aliPay(Orders orders) throws AlipayApiException {
         log.info("service alipay: {}", orders);
-        return alipays.pay(orders);
+        return alipay.pay(orders);
     }
 
     @Override

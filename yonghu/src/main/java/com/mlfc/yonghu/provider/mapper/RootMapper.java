@@ -2,7 +2,7 @@ package com.mlfc.yonghu.provider.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
-import pojo.Root;
+import com.mlfc.api.pojo.Root;
 
 @Mapper
 public interface RootMapper {

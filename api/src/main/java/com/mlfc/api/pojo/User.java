@@ -1,4 +1,4 @@
-package pojo;
+package com.mlfc.api.pojo;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package common;
+package com.mlfc.api.common;
 
 public class SnowflakeIdGenerator {
     // 设定时间起点（Unix时间戳，单位为毫秒）

@@ -1,7 +1,7 @@
-package apiservice;
+package com.mlfc.api.apiservice;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import pojo.User;
+import com.mlfc.api.pojo.User;
 
 public interface UserService extends IService<User> {
 

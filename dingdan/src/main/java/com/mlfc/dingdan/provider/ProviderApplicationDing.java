@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @EnableDubbo
 @MapperScan("com.mlfc.dingdan.provider.mapper")
-@ComponentScan("com.mlfc.dingdan")
+@ComponentScan(basePackages = {"com.mlfc.api", "com.mlfc.dingdan"})
 @SpringBootApplication
 public class ProviderApplicationDing {
     public static void main(String[] args) {

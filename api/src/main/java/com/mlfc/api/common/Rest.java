@@ -1,4 +1,4 @@
-package common;
+package com.mlfc.api.common;
 
 
 import lombok.Data;

@@ -1,11 +1,11 @@
 package com.mlfc.yonghu.consumer.controller;
 
-import apiservice.RootService;
-import common.Rest;
+import com.mlfc.api.apiservice.RootService;
+import com.mlfc.api.common.Rest;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.web.bind.annotation.*;
-import pojo.Root;
+import com.mlfc.api.pojo.Root;
 
 @Slf4j
 @RestController

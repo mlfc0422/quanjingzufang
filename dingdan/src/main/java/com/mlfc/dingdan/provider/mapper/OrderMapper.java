@@ -2,10 +2,9 @@ package com.mlfc.dingdan.provider.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Update;
-import pojo.Order;
-import pojo.Orders;
+import com.mlfc.api.pojo.Order;
+import com.mlfc.api.pojo.Orders;
 
 @Mapper
 public interface OrderMapper extends BaseMapper<Order> {

@@ -1,13 +1,13 @@
 package com.mlfc.fangyuan.consumer.controller;
 
-import apiservice.FangyuanService;
+import com.mlfc.api.apiservice.FangyuanService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import common.Rest;
+import com.mlfc.api.common.Rest;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.web.bind.annotation.*;
-import pojo.Property;
+import com.mlfc.api.pojo.Property;
 import java.util.List;
 
 @RequestMapping("fangyuan")

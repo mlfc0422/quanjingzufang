@@ -1,9 +1,9 @@
-package apiservice;
+package com.mlfc.api.apiservice;
 
 import com.alipay.api.AlipayApiException;
 import com.baomidou.mybatisplus.extension.service.IService;
-import pojo.Order;
-import pojo.Orders;
+import com.mlfc.api.pojo.Order;
+import com.mlfc.api.pojo.Orders;
 
 public interface OrderService extends IService<Order> {
     boolean createOrder(Order order);

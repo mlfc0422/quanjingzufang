@@ -1,4 +1,4 @@
-package pojo;
+package com.mlfc.api.pojo;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.annotation.JsonFormat;

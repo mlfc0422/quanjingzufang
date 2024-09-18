@@ -1,10 +1,10 @@
 package com.mlfc.yonghu.provider.impl;
 
-import apiservice.RootService;
+import com.mlfc.api.apiservice.RootService;
 import com.mlfc.yonghu.provider.mapper.RootMapper;
 import org.apache.dubbo.config.annotation.DubboService;
 import org.springframework.beans.factory.annotation.Autowired;
-import pojo.Root;
+import com.mlfc.api.pojo.Root;
 
 @DubboService
 public class RootServiceImpl implements RootService {
