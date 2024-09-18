@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import com.mlfc.api.pojo.Property;
 import java.util.List;
 
-@RequestMapping("fangyuan")
+@RequestMapping("/fangyuan")
 @RestController
 @Slf4j
 public class FangyuanController {
@@ -77,6 +77,12 @@ public class FangyuanController {
 
         // 返回包含分页数据的响应
         return Rest.success(resultPage);
+    }
+
+
+    @GetMapping("/test")
+    public String test() {
+        return "test";
     }
 }
 

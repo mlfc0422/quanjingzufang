@@ -13,4 +13,5 @@ public class Root implements Serializable {
     private Long id;
     private String account;
     private String password;
+    private String token;
 }
